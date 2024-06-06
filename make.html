@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商业商旅</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 240px;
+        }
+
+        body .shell-main {
+            margin-bottom: 0;
+        }
+
+        body .shell-main-nav {
+            margin-bottom: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to bottom, #a1e6ff, #a1e6ff);
+            height: 700px;
+        }
+
+        header img {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        header h2 {
+            font: 100 60px '';
+            margin-bottom: 20px;
+            font-family: font;
+            letter-spacing: 5px;
+            border-bottom: 2px solid rgb(134, 134, 118);
+            color: #ffffff;
+        }
+
+        header p {
+            font: 100 30px '';
+            letter-spacing: 5px;
+        }
+
+        .h-b {
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+
+        }
+
+        .h-b p {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .h-b-l,
+        .h-b-r {
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* ------------------------------------------------------------------ */
+        footer {
+            max-width: 1430px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            border: 1px rgba(0, 0, 0, 0.187) solid;
+            margin: 20px 0;
+        }
+
+        .left {
+            width: 70%;
+
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left p {
+            text-align: left;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            font: 600 25px '';
+            color: rgb(147, 145, 142);
+        }
+
+        .top {
+            margin: 30px 0;
+        }
+
+        .top table {
+            margin: 30px 0;
+            width: 100%;
+            border-collapse: collapse;
+            border: rgba(0, 0, 0, 0.216);
+        }
+
+        .top table td {
+            padding: 3px 10px;
+        }
+
+        .top table th {
+            background-color: rgb(248, 248, 248);
+        }
+
+        .left h2,
+        .right h2 {
+            font-size: 30px;
+            position: relative;
+            width: 100%;
+            /* height: 30px; */
+        }
+
+        .left h2::after,
+        .right h2::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -20px;
+            background-color: rgb(100, 160, 240);
+            width: 15px;
+            height: 100%;
+            top: 0;
+        }
+
+        .right h2::after {
+            left: 0;
+        }
+
+        .right h2 {
+            padding: 0 20px;
+            font-size: 20px;
+        }
+
+        .left h2::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 80%;
+            height: 2px;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: rgba(0, 0, 0, 0.223)
+        }
+
+        .left span {
+            font-size: 15px;
+        }
+
+        .imgs {
+            width: 100%;
+            display: flex;
+        }
+
+        .imgs img {
+            width: 25%;
+        }
+
+        .right {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .right img {
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        .bottom {
+            position: sticky;
+            top: 20px;
+        }
+
+        .b {
+            width: 100%;
+            background-color: #fff;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border: rgba(0, 0, 0, 0.216) 1px solid;
+        }
+        @media (max-width:1000px){
+            .h-b-r,.h-b-l,.right{
+                display: none;
+            }
+            .content{
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                   <img src="./image/teamlogo.png" alt="">
+                    
+                </div>
+                <ul>
+					 <li><a href="index.html" >首页</a></li>
+                   <li><a href="ziye1.html">即刻启航</a></li>
+             <li ><a href="ziye3.html">攻略·景点</a></li>
+      <li class="active"><a href="make.html">企业商旅</a></li>
+			
+			 <li ><a href="SIGN.html">注册/登录</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+        </div>
+        <header>
+            <h2>元旅探索-定制您的专属VR/AR产品</h2>
+            <!-- <p>只做最优质的产品</p> -->
+            <div class="h-b">
+                <div class="h-b-l">
+                    <div class="h-b-l-h">
+                        <p>极快的效率</p>
+                        <span>我们在了解您的需求之后将会以最快的速度安排技术人员开始进行制作与设计，在最短的时间给您呈现出最好的效果</span>
+                    </div>
+                    <div class="h-b-l-b">
+                        <p>优质的服务</p>
+                        <span>当您在我们这里制作VR/AR之后，往后该项目的一切售后我们都会一直为您服务，如果您有什么需求要更改，我们也会免费为您更改</span>
+                    </div>
+                </div>
+                <img src="./image/网站设计.png" alt="">
+                <div class="h-b-r">
+                    <div class="h-b-r-h">
+                        <p>诚信的店铺</p>
+                        <span>在制作完成之后我们会先录视频给您过目一次先，等您那没有问题后我们才会发货</span>
+                    </div>
+                    <div class="h-b-r-b">
+                        <p>绝对的好评</p>
+                        <span>我们制作出的VR/AR项目效果都会超乎您的预期，在不收取额外费用的同时制作出更好更强的效果</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <footer>
+            <div class="content">
+                <div class="left">
+                    <div class="top">
+                        <h2>简介：</h2>
+                        <span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 纬度梦境项目组，为您带来足不出户的vr旅行体验。<br />
+                          
+纬度梦境是一个充满创造活力与艺术激情的技术团队，由多个专业的佼佼青年大学生组成，对数字旅行浇铸创新的动力，将vr技术与3d旅景建模深入融合，打造感官非
+							凡的vr旅程。<br /> 　
+                         我们纬度梦境项目组具有一套完整的项目管理流程和质量控制体系，感官艺术和精准数据的结
+							合控制，以确保为您献上身临其境的vr文旅盛宴。</span>
+                    </div>
+
+                    <div class="top">
+                        <h2>研发分层：</h2>
+                        <span>
+                            <br>
+                            <p> 其中业务层：</p>
+                            <br> 主要负责依赖于基础建设的部分，完成业务开发，要求对业务逻辑更加清楚。
+                            <br>
+                            <br>
+                            <p> 基础建设层：</p>
+                            <br> 主要是根据业务提炼技术方向的基础平台和组件部分，前端服务部分，也可以做一些对开发流程有帮助、优化的工具。
+                            <br>
+                            <br>
+                            <p> 架构层：</p>
+                            <br> 主要是进行技术的预研究，大型技术架构的整理与搭建，时兴技术的学习与成品演示。
+                            <br>
+                            <br>
+                            然而就算这样分层，其实其具体的工作还是分不开的，不太可能有些人只做业务或者架构，也和大家的职业诉求有关。比较好的融合是每个人的各个层次的工作都有涉及，只是比重不同。就结果论导向而言，是需要各个层次有其对应的负责人，首先保证技术成果，业务成果，然后是尽可能的满足大家每个阶段对技术的成长、使用的需求。
+
+                        </span>
+                    </div>
+                    <div class="top">
+                        <h2>其他合作关系：</h2>
+                        <br>
+                        <p>订阅服务</p>
+                        <br> 模式：免费提供试用次数进行体验，并提供月度或年度订阅服务，用户根据自身需求支付固定费用以获得无限次访问平台上所有虚拟体验的权限。
+                        <br>
+                       
+                        <br>
+                        <p>合作伙伴和联盟营销</p>
+                        <br> 与旅游目的地、文化机构和其他相关企业建立合作关系，通过推广其景点或产品获得收益。
+                        <br> 通过提供特定目的地的虚拟体验，引导用户参与实际的旅行活动，并在虚拟世界开设相关特产的虚拟店铺。
+                       
+                        <br>
+                        <br>
+                        <p>产品销售和租赁</p>
+                        <br> 销售或租赁VR/AR设备、发行NFT版限量纪念品、周边商品等。
+商品种类：包括VR头盔、主题服装、艺术品乃至门票等。
+                     
+                        <br>
+                        <br>
+                        <p>特许经营和品牌授权</p>
+                        <br> 通过买卖的方式将虚拟旅游体验的特许经营权售卖给其他企业，或对外授权使用品牌和内容。
+                    
+                        </span>
+                    </div>
+                    <div class="top">
+                        <h2>大前端团队矩阵：</h2>
+                        <span>
+                            <br>
+                            <p>业务模块设计</p>
+                            <br> 包括分业务线的模块，以及二级业务线的关系
+                            <br>
+                            <br>
+                            <p>前端底层服务</p>
+                            <br> 包括公共ui组件，前端服务比如图片上传，自动部署等，性能监控
+                            <br>
+                            <br>
+                            <p>研究院</p>
+                            <br> 主要是做架构层的工作，预先完成需求的技术攻关，项目的长久规划，解决历史债务以及未来的技术储备问题。
+                            <br>
+                            <br>
+                            <p>内部工具展示层</p>
+                            <br> 比如除了基本业务之外，很多内部工具包括前端、后端、测试、ui甚至客服、销售的系统都是需要界面，而需要界面就需要前端完成。
+                            <br>
+                            <br>
+                            <p>网关&&bff架构</p>
+                            <br> 主要负责前端为主的产品接口集中管理，安全性校验。
+                            <br>
+                            <br> 其中BFF架构主要是为客户端，h5,pc等前端产品提供专业化的接口服务，其主要工作是根据微服务完成接口整合和数据整合，让其更符合前端业务和交互的需求需要。
+                        </span>
+                    </div>
+                </div>
+                <div class="right">
+                    
+                    <div class="bottom">
+                        <h2>制作流程：</h2>
+                        <br>
+                        <span>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;⼀、确定VR/AR项目主题
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;⼆、搜集材料
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;三、规划项目整体框架布局
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;四、选择合适的制作⼯具
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;五、制作
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;六、上传测试
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <img src="./image/网页设计布局.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+        <div class="shell-main-footer">
+            <span></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

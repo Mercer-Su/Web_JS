@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>即刻启航</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/all.css">
+    
+	 <link rel="stylesheet" href="./css/search1.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 480px;
+        }
+        :root {
+            --bgColor: white;
+            --inputColor: black;
+            --outlineColor: rgb(141, 228, 41);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bgColor);
+        }
+
+        body.show-password {
+            --bgColor: rgba(0, 0, 0, 0.9);
+            --inputColor: white;
+            --outlineColor: rgb(151, 247, 218);
+        }
+
+        form {
+            transform: translate3d(0, 0, 0);
+            padding: 10px;
+        }
+
+        form>*+* {
+            margin-top: 10px;
+        }
+
+        .form-item>*+* {
+            margin-top: 0.5rem;
+        }
+
+        label,
+        input,
+        button {
+            font-size: 1.5rem;
+            font-family: monospace;
+            color: var(--inputColor);
+        }
+
+        label:focus,
+        input:focus,
+        button:focus {
+            outline: 3px solid var(--outlineColor);
+            outline-offset: 2px;
+        }
+
+        label::-moz-focus-inner,
+        input::-moz-focus-inner,
+        button::-moz-focus-inner {
+            border: none;
+        }
+
+        label[id=password],
+        input[id=password],
+        button[id=password] {
+            color: black;
+        }
+
+        button {
+            border: none;
+        }
+
+        [id=submit] {
+            cursor: pointer;
+            margin: 20px 0 0 2px;
+            padding: 0.75rem 1.25rem;
+            color: var(--bgColor);
+            background-color: var(--inputColor);
+            box-shadow: 4px 4px 0 rgba(30, 144, 255, 0.2);
+        }
+
+        [id=submit]:active {
+            transform: translateY(1px);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        input {
+            padding: 0.75rem 4rem 0.75rem 0.75rem;
+            width: 100%;
+            border: 2px solid transparent;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 2px black, inset 6px 6px 0 rgba(30, 144, 255, 0.2), 3px 3px 0 rgba(30, 144, 255, 0.2);
+            -webkit-appearance: none;
+        }
+
+        input:focus {
+            outline-offset: 1px;
+        }
+
+        .show-password input {
+            box-shadow: inset 0 0 0 2px black;
+            border: 2px dashed white;
+        }
+
+        .show-password input:focus {
+            outline: none;
+            border-color: rgb(151, 247, 218);
+        }
+
+        [id=eyeball] {
+            --size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            position: absolute;
+            top: 50%;
+            right: 0.75rem;
+            border: none;
+            background-color: transparent;
+            transform: translateY(-50%);
+        }
+
+        [id=eyeball]:active {
+            transform: translateY(calc(-50% + 1px));
+        }
+
+        .eye {
+            width: var(--size);
+            height: var(--size);
+            border: 2px solid var(--inputColor);
+            border-radius: calc(var(--size) / 1.5) 0;
+            transform: rotate(45deg);
+        }
+
+        .eye:before,
+        .eye:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        .eye:before {
+            width: 35%;
+            height: 35%;
+            background-color: var(--inputColor);
+        }
+
+        .eye:after {
+            width: 65%;
+            height: 65%;
+            border: 2px solid var(--inputColor);
+            border-radius: 100%;
+        }
+
+        [id=beam] {
+            position: absolute;
+            top: 50%;
+            right: 1.75rem;
+            -webkit-clip-path: polygon(100% 50%, 100% 50%, 0 0, 0 100%);
+            clip-path: polygon(100% 50%, 100% 50%, 0 0, 0 100%);
+            width: 100vw;
+            height: 25vw;
+            z-index: 1;
+            mix-blend-mode: multiply;
+            transition: transform 200ms ease-out;
+            transform-origin: 100% 50%;
+            transform: translateY(-50%) rotate(var(--beamDegrees, 0));
+            pointer-events: none;
+        }
+
+        .show-password [id=beam] {
+            background:rgb(151, 247, 218);
+        }
+        body .shell-main-footer{
+            position: absolute;
+            bottom: 100px;
+        }
+        body .shell{
+            height: 100vh;
+            position: relative
+        }
+        body .shell-main-footer{
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell" style="position: relative;">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                   <img src="./image/teamlogo.png" alt="">
+                    
+                </div>
+                <ul>
+					 <li><a href="index.html" >首页</a></li>
+                   <li class="active"><a href="ziye1.html">即刻启航</a></li>
+             <li ><a href="ziye3.html">攻略·景点</a></li>
+ <li><a href="make.html">企业商旅</a></li>
+			 <li class="active"><a href="ziye4.html">社区讨论</a></li>
+			 <li ><a href="SIGN.html">注册/登录</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+        </div>
+	</div>  
+	 <div class="container78" style="position: absolute; z-index: 2;">
+        <i class="fa-brands fa-windows item" style="color: skyblue;"></i>
+            <br>
+            <div class="search-box">
+                <form action="http://www.baidu.com/baidu" target="_blank">
+                    <div align="center">
+                    <input name=tn type=hidden value=baidu>
+                    <a href="http://www.baidu.com/"></a>
+                    <input type="text" class="search-btn" placeholder="输入你想去的城市" name=word >
+             </form>
+            </div>
+        </div>
+       <a href="shanxi.html"><i class="fa-solid fa-magnifying-glass item" style="color: skyblue;"></i>.</a> 
+		 
+    </div>
+    <div class="timeBox">加载中</div>
+    <script src="https://kit.fontawesome.com/f23451c27c.js" crossorigin="anonymous"></script>
+    <script>
+        var searchBtn = document.querySelector('.search-btn')
+        var style1 = document.createElement('style')
+        var searchBox = document.querySelector('.search-box')
+        var timeBox = document.querySelector('.timeBox')
+        searchBtn.addEventListener('focus', function () {
+            style1.innerHTML = "body::before{ filter: blur(20px); transform: scale(1.01);}";
+            document.head.appendChild(style1);
+            searchBox.style.width = '440px'
+        })
+        searchBtn.addEventListener('blur', function () {
+            document.head.removeChild(style1);
+            searchBox.style.width = ""
+        })
+
+        setInterval(function () {
+            var date = new Date()
+            let hh = padZero(date.getHours())
+            let mm =padZero( date.getMinutes())
+            let ss = padZero(date.getSeconds())
+            timeBox.innerText = hh + ':' + mm + ':' + ss
+        }, 1000)
+
+        function padZero(n) {
+            return n > 9 ? n : '0' + n
+        }
+		var searchIcon = document.querySelector('.fa-magnifying-glass');
+
+		// 监听文本框的键盘事件
+    searchBtn.addEventListener('keyup', function(event) {
+        if (event.keyCode === 13) {  // 判断是否是回车键
+            triggerSearch();
+        }
+    });
+
+    // 监听搜索图标的点击事件
+    searchIcon.addEventListener('click', function() {
+        triggerSearch();
+    });
+
+    // 触发搜索的函数
+    function triggerSearch() {
+        // 在这里添加执行搜索的代码
+        console.log("触发搜索");
+	// 在这里添加前端路由跳转的代码
+			// 替换 'YOUR_TARGET_PAGE' 为要跳转的目标页面路径
+			var targetPage = 'YOUR_TARGET_PAGE';
+			
+			// 页面跳转
+			window.location.href = targetPage;
+
+    }
+
+  fetch('YOUR_API_ENDPOINT?query=SEARCH_TERM')
+                    .then(response => response.json())
+                    .then(data => {
+                        // 处理 API 返回的数据
+                        var nextPageUrl = data.nextPageUrl;
+
+                        // 页面跳转
+                        if (nextPageUrl) {
+                            window.location.href = nextPageUrl;
+                        } else {
+                            console.error('API 返回的数据缺少 nextPageUrl');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('API 请求失败:', error);
+                    });
+  </script>
+	
+</body>
+
+</html>
